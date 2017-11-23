@@ -12,7 +12,7 @@ from .models import OrderLine
 class GeoPointSerializer(serializers.ModelSerializer):
     class Meta:
         model = GeoPoint
-        fields = ('lat', 'lon', 'alt', 'name')
+        fields = '__all__'
 
 
 class CategorySerializer(serializers.ModelSerializer):
