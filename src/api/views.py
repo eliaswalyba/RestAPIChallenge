@@ -23,6 +23,14 @@ from .serializers import OrderSerializer
 from .serializers import OrderLineSerializer
 
 
+""" This file handles all the views I use to render the ressources.
+    I could obviously seperate all classes in different mini files (on class per file like in Java)
+    but I consider this as a simple application and I really do not have enough time to apply all good practices.
+
+    coded with love and enthusiasm by @eliaswalyba in Nov 22nd, 2017 
+"""
+
+
 class GeoPointList(APIView):
 
     def get(self, request):

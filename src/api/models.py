@@ -92,22 +92,6 @@ class Meal(models.Model):
         return self.name + " " + str(self.price)
 
 
-class Order(models.Model):
-
-    """ This class represents an order.
-        An order is just a set of a customer who ordered, a location to ship the order, 
-        is the order validated or not and a date of the order
-    """
-
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    geopoint = models.ForeignKey(GeoPoint, on_delete=models.CASCADE)
-    is_valid = models.BooleanField(default=False)
-    date = models.DateField(auto_now_add=True)
-
-    def __str__(self):
-        return self.customer.cellphone + " placed an order in " + str(self.date)
-
-
 class OrderLine(models.Model):
 
     """ This class represents a line of an order.
@@ -119,9 +103,25 @@ class OrderLine(models.Model):
         So an order line is just a set of an order, a meal and the quantity the customer ordered of that meal
     """
 
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     meal = models.ForeignKey(Meal, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
 
     def __str__(self):
         return str(self.quantity) + " orders of " + self.meal.name
+
+
+class Order(models.Model):
+
+    """ This class represents an order.
+        An order is just a set of a customer who ordered, a location to ship the order, 
+        is the order validated or not and a date of the order
+    """
+
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    orderline = models.ManyToManyField(OrderLine)
+    geopoint = models.ForeignKey(GeoPoint, on_delete=models.CASCADE)
+    is_valid = models.BooleanField(default=False)
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.customer.cellphone + " placed an order in " + str(self.date)
