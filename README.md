@@ -6,3 +6,6 @@ RESTful API for the management of the orders in the restaurant mobile applicatio
 ### OS
 Ubuntu
 
+## Database diagramme
+![](./models.png "Database diagramme")
+
