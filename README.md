@@ -7,7 +7,6 @@ RESTful API for the management of the orders in the restaurant mobile applicatio
 ![](./models.png "Database diagramme")
 
 ## Ressources Endpoints
-### Orders
 | METHOD | URL               | DESCRIPTION                                 |
 |--------|-------------------|---------------------------------------------|
 | GET    | /api/orders/      | displays all orders in the database         |
