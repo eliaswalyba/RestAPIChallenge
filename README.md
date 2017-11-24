@@ -7,15 +7,14 @@ RESTful API for the management of the orders in the restaurant mobile applicatio
 
 ## Environnement
 ### OS
-Ubuntu
+* Ubuntu
 
 ### Programming language
-Python 3.5
+* Python 3.5
 
 ### Frameworks
-Django 1.11.7
-
-DjangoRestFramework 3
+* Django 1.11.7
+* DjangoRestFramework 3
 
 ### Editor
-Visual Studio Code 1.18.1
+* Visual Studio Code 1.18.1
