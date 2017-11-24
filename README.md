@@ -11,6 +11,7 @@ Python 3.5
 
 ### Frameworks
 Django 1.11.7
+
 DjangoRestFramework 3
 
 ### Editor
@@ -18,4 +19,3 @@ Visual Studio Code 1.18.1
 
 ## Database diagramme
 ![](./models.png "Database diagramme")
-
