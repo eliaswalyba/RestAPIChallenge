@@ -65,7 +65,7 @@ class OrderLineSerializer(serializers.ModelSerializer):
 class OrderSerializer(serializers.ModelSerializer):
     geopoint = GeoPointSerializer()
     customer = CustomerSerializer()
-    orderline = OrderLineSerializer(many=True)
+    #orderline = OrderLineSerializer(many=True)
     class Meta:
         model = Order
         fields = '__all__'
