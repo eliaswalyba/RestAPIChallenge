@@ -2,6 +2,9 @@
 RESTful API for the management of the orders in the restaurant mobile application MonMenu by Suite 2.0
 ![](./food.jpg "Wallpaper")
 
+## Database diagramme
+![](./models.png "Database diagramme")
+
 ## Environnement
 ### OS
 Ubuntu
@@ -16,6 +19,3 @@ DjangoRestFramework 3
 
 ### Editor
 Visual Studio Code 1.18.1
-
-## Database diagramme
-![](./models.png "Database diagramme")
